@@ -12,20 +12,22 @@ const palindromes = function (str) {
         }
     }
 
-    console.log("str " + strArray);
-    console.log("rev " + strReverse);
+    // Normalize the string and remove non-alphanumeric characters with regular expression
+    // const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
     if (strArray.toString() === strReverse.reverse().toString()) {
         // .toString() methods because arrays are objects,
         // they point to different parts of memory, so they 
         // compare to false, being != locations
-        console.log("str " + strArray);
-        console.log("rev " + strReverse);
         return true
     } else {
-        console.log("str " + strArray);
-        console.log("rev " + strReverse);
         return false
     }
+
+    // Reverse the cleaned string
+    // const reversedStr = cleanedStr.split('').reverse().join('');
+    // Compare the cleaned string with its reverse
+    // return cleanedStr === reversedStr;
 };
 
 // Do not edit below this line
